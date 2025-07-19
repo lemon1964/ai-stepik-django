@@ -24,8 +24,8 @@ else:
     CSRF_COOKIE_SECURE = True
     CSRF_COOKIE_HTTPONLY = True
     # позже заменим на prod
-    FRONT_URL = "http://localhost:3000"
-    DOMAIN = "localhost:8000"
+    FRONT_URL = "https://ai-stepik-next.onrender.com"
+    DOMAIN = "ai-stepik-django.onrender.com"
 
 INSTALLED_APPS = [
     'django.contrib.sites',
