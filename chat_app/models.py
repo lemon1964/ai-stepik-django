@@ -49,7 +49,8 @@ class Answer(models.Model):
         return f"{self.question} → {self.content[:20]}…"
 
     class Meta:
-        ordering = ["-created_at"]
+        ordering = ["created_at"]
+        # ordering = ["-created_at"]
         
         
 class GeneratedImage(models.Model):
