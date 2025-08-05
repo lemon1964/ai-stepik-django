@@ -154,10 +154,13 @@ ACCOUNT_AUTHENTICATED_REDIRECT_URL = "/"  # Переадресация посл�
 REST_USE_JWT = True  # Используем JWT для аутентификации
 
 SIMPLE_JWT = {
-    # 'ACCESS_TOKEN_LIFETIME': timedelta(minutes=600),
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1000),
-    # 'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
+    # 'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1000),
+    # 'ACCESS_TOKEN_LIFETIME': timedelta(seconds=5.0),
+    # 'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1),
+    # 'REFRESH_TOKEN_LIFETIME': timedelta(minutes=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    # 'ROTATE_REFRESH_TOKENS': False,
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
 }

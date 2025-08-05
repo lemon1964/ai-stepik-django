@@ -1,4 +1,5 @@
 # ai-chat-django/auth_app/views.py
+from datetime import timezone
 from dj_rest_auth.registration.views import RegisterView
 from .serializers import CustomRegisterSerializer
 
@@ -198,6 +199,10 @@ class RefreshTokenView(APIView):
         try:
             token = RefreshToken(refresh_token)         # Создаем токен
 
+            # # Проверяем, что токен не истёк
+            # if token['exp'] < int(timezone.now().timestamp()):
+            #     raise TokenError("Refresh token expired")
+            
             # Проверка, находится ли токен в черном списке
             if BlacklistedToken.objects.filter(token__jti=token['jti']).exists():
                 raise AuthenticationFailed(detail="Token has been blacklisted.")
