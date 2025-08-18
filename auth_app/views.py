@@ -198,10 +198,6 @@ class RefreshTokenView(APIView):
             )
         try:
             token = RefreshToken(refresh_token)         # Создаем токен
-
-            # # Проверяем, что токен не истёк
-            # if token['exp'] < int(timezone.now().timestamp()):
-            #     raise TokenError("Refresh token expired")
             
             # Проверка, находится ли токен в черном списке
             if BlacklistedToken.objects.filter(token__jti=token['jti']).exists():
