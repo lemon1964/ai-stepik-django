@@ -1,44 +1,20 @@
-# AI Chat — backend (Django + DRF)
+# AI на Django и Next.js — Backend (Original)
 
-Бэкенд для AI-чата. Обеспечивает:
+Демо бэкенда финального проекта курса: API для AI-агрегатора (авторизация, модели, маршруты).
 
-- Авторизацию (NextAuth)
-- Подключение AI-моделей
-- Обмен сообщениями
-- Логику fallback
-- API для фронта
+- **Live**: https://ai-stepik-django.onrender.com
+- **Frontend**: https://ai-stepik-next.onrender.com
+- **Пролог**: https://lemon1964.github.io/ai-chat-ghpages/
 
-## 🔗 Связан с фронтом
+## О проекте
+Оригинальная прод-версия Django/DRF backend. Полная реализация и пошаговая сборка доступны в курсах:
+- Часть I (бесплатно): https://stepik.org/a/250212  
+- Часть II (продолжение): https://stepik.org/a/250427
 
-Репозиторий: [ai-chat-next](https://github.com/lemon1964/ai-stepik-next.git)  
-Продакшен: https://ai-stepik-django.onrender.com
+> В этом репозитории **нет исходников**. Только информация о демо и ссылки.
 
-## ⚙️ Стэк
+## Стек
+Python · Django 5 · Django REST Framework · JWT/Session · CORS · Render (deploy)
 
-- [Django 5](https://www.djangoproject.com/)
-- [Django REST Framework](https://www.django-rest-framework.org/)
-- [SQLite](https://www.sqlite.org/index.html)
-- [gunicorn](https://gunicorn.org/)
-
-## 🚀 Установка
-
-```bash
-git clone https://github.com/lemon1964/ai-stepik-django.git
-cd ai-chat-django
-cp .env.example .env
-pip install -r requirements.txt
-```
-
-## 🧪 Запуск в dev-режиме
-
-```bash
-python3 manage.py migrate
-python3 manage.py runserver
-```
-
-Откройте [http://localhost:8000](http://localhost:8000)
-
-## 🌐 Продакшен
-
-Хостинг: [Render](https://render.com)
-URL: [https://ai-stepik-django.onrender.com](https://ai-stepik-django.onrender.com)
+## Правовой статус
+Демо-окружение для образовательных целей. Настройка ключей/моделей и инструкции — внутри курсов.
